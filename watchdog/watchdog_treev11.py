@@ -30,7 +30,8 @@ from watchdog.events import FileSystemEventHandler
 """
 
 # WATCH_DIR = "/home/cmspractice/FCFD-Project/ToWatch"
-WATCH_DIR = "/home/cmspractice/FCFD-Project/FCFD-Laser-main/DAQ/PreProcessed"
+# WATCH_DIR = "/home/cmspractice/FCFD-Project/FCFD-Laser-main/DAQ/PreProcessed"
+WATCH_DIR = "/home/cmspractice/FCFD-Project/Data/PreProcessed"
 
 TREE_NAME = "pulse"
 REF_CH    = 0   # reference channel for LP2_50 difference (trigger channel)
