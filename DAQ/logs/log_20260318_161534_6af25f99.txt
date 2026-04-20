@@ -1,0 +1,25 @@
+2026-03-18 16:15:34,034 - INFO - Initializing Motor
+2026-03-18 17:02:07,967 - INFO - move_rel axis=Y dY=10000.0um wait=100
+2026-03-18 17:02:16,934 - INFO - move_rel axis=Y dY=-10000.0um wait=100
+2026-03-18 17:02:22,799 - INFO - move_rel axis=Y dY=-10000.0um wait=100
+2026-03-18 17:02:28,471 - INFO - move_rel axis=Y dY=10000.0um wait=100
+2026-03-18 17:03:17,472 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:20,184 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:22,680 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:25,433 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:28,505 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:31,769 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:39,409 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:42,561 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:45,201 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:47,505 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:03:50,025 - INFO - move_rel axis=Y dY=1000.0um wait=100
+2026-03-18 17:05:03,627 - INFO - move_rel axis=Y dY=10000.0um wait=100
+2026-03-18 17:05:09,764 - INFO - move_rel axis=Y dY=-20000.0um wait=100
+2026-03-18 17:05:18,804 - INFO - move_rel axis=Y dY=-1000.0um wait=100
+2026-03-18 17:05:21,580 - INFO - move_rel axis=Y dY=-1000.0um wait=100
+2026-03-18 17:05:27,893 - INFO - move_rel axis=Y dY=-3000.0um wait=100
+2026-03-18 17:08:34,703 - INFO - move_rel axis=X dX=3000.0um wait=100
+2026-03-18 17:08:37,888 - INFO - move_rel axis=X dX=-3000.0um wait=100
+2026-03-18 17:09:08,841 - INFO - move_rel axis=Z dZ=-3000.0um wait=100
+2026-03-18 17:09:23,690 - INFO - move_rel axis=Z dZ=3000.0um wait=100

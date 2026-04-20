@@ -1,0 +1,3 @@
+2026-03-18 15:29:44,903 - INFO - Initializing Motor
+2026-03-18 15:29:48,792 - INFO - move_rel axis=Z dZ=10000.0um wait=100
+2026-03-18 15:29:58,697 - INFO - move_rel axis=Z dZ=-10000.0um wait=100

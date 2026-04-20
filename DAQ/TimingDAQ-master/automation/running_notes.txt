@@ -1,0 +1,70 @@
+1)
+Sudo:
+ssh cmslpc
+kinit cmorgoth
+ssh otsdaq@ftbf-daq-08.fnal.gov
+sshfs -o allow_other cpena@lxplus.cern.ch:/eos/cms/store/group/phys_susy/razor/FNAL_TB_1811 /lxplus/
+
+Once:
+ssh cmslpc
+kinit sxie
+ssh otsdaq@ftbf-daq-08.fnal.gov
+cd /data/TestBeam/2018_11_November_CMSTiming/
+kinit sxie
+python transfer_ftbf2EOS.py
+Every run:
+
+Check the teminal to monitor the process
+
+2) The guy in charge of the OTSDAQ should do it
+SUDO:
+kinit cmorgoth
+ssh otsdaq@rulinux04.dhcp.fnal.gov
+sshfs -o allow_other cpena@lxplus.cern.ch:/eos/cms/store/group/phys_susy/razor/FNAL_TB_1811 /lxplus/
+
+Once:
+ssh cmslpc
+kinit sxie
+ssh otsdaq@rulinux04.dhcp.fnal.gov
+kinit sxie
+cd CMSTiming/
+
+Every run:
+./HyperScriptFastTrigger_CERN_and_CMSLPC.sh RUN_NUMBER FLAG(0 for CERN, 1 for FNAL, 2 for both)
+
+Alternatively:
+Run HypeScript with 0 flag and then from otsdaq@rulinux04 ~CMSTiming do
+python copy_cern_to_lpc.py (change mhussain to your user name)
+
+
+
+3)
+Once:
+ssh lxplus
+cd /eos/cms/store/group/phys_susy/razor/FNAL_TB_1811/TimingDAQ
+source setup_lxplus.sh
+
+Alternatively, to run on cmslpc:
+ssh cmslpc
+kinit sxie
+cd /eos/uscms/store/user/cmstestbeam/BTL_ETL/2018_11/TimingDAQ
+source setup_cmslpc.sh
+
+Every run:
+
+Fast --> python automation/DecodeData.py -f --vVME vf1 -R RUN_NUMBER
+Full analysis --> python automation/DecodeData.py --vVME v2 --NO_save_meas -R RUN_NUMBER
+
+4)
+Once:
+ssh lxplus
+cd /eos/cms/store/group/phys_susy/razor/FNAL_TB_1811/data
+kinit sxie@FNAL.GOV
+
+Every run:
+rsync -artvu --progress ./*/RECO/* sxie@cmslpc-sl6.fnal.gov:/eos/uscms/store/user/cmstestbeam/BTL_ETL/2018_11/data/
+
+
+Notes:
+!!!! CONFIG FILE SHOULD NOT BE CHANGED. A NEW FILE WITH A NEW NUMBER SHOULD BE CREATED IF MODIFICATIONS ARE NEEDED
+RECO_VERSION is something like v<spec><num> (v1, vf1, ...) and has to have a corresponded config file in the config directory.

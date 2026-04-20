@@ -1,0 +1,36 @@
+1) Get VME binary and NimPlus
+->The guy on macmini
+Once:
+kinit sxie
+-- Check the line 8 or 9 commented inside transfer_ftbf2mac-mini.py to change from Slave to Master
+python automation/transfer_ftbf2mac-mini.py --run_HyperScript
+
+Every run:
+Check the terminal to monitor the process
+
+2) Get tracks
+Once:
+cd /Users/fqnet1/FNAL_TB/18_11/TimingDAQ
+kinit sxie
+python automation/transfer_rulinux042mac-mini.py
+
+Every run:
+Check the terminal to monitor the process
+
+
+3) Process the decoding and the analysis
+Once:
+cd /Users/fqnet1/FNAL_TB/18_11/TimingDAQ
+
+Automatic:
+python python automation/prompt_loop_mac-mini.py --v_fast v5 --wait_for_tracks --auto_copy --run_DQM --ignore_before LAST_RUN_TAKEN
+
+Manual:
+--> python automation/DecodeData.py -f --vVME v5 -R RUN_NUMBER
+--> python automation/DecodeData.py --vVME v5 --NO_save_meas -R RUN_NUMBER
+
+
+
+Notes:
+!!!! CONFIG FILE SHOULD NOT BE CHANGED. A NEW FILE WITH A NEW NUMBER SHOULD BE CREATED IF MODIFICATIONS ARE NEEDED
+RECO_VERSION is something like v<spec><num> (v1, vf1, ...) and has to have a corresponded config file in the config directory.
